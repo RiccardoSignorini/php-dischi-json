@@ -11,7 +11,9 @@
 <body>
     <!-- DIV VUE -->
     <div id="app">
-        
+        <div class="container text-center">
+            <h1>spotify</h1>
+        </div>
     </div>
 
     <!-- LINK AXIOS -->
@@ -21,6 +23,6 @@
     <!-- LINK VUE -->
     <script src="https://unpkg.com/vue@3"></script>
     <!-- LINK JS -->
-    <script src="./assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
