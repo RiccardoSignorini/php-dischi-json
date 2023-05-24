@@ -12,10 +12,11 @@
     <!-- DIV VUE -->
     <div id="app">
         <div class="container">
-            <h1>spotify</h1>
+            <h1>Spotify</h1>
             <ul>
                 <li v-for="(elem, index) in album" :key="index">{{elem.title}}</li>
             </ul>
+            
         </div>
     </div>
 

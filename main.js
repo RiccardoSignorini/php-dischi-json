@@ -6,20 +6,23 @@ createApp({
         return{
             // VARIABILI
             albumArray: 'script.php',
-            album: '',
+            album: [],
+            test:"no problem"
         }
     },	
 
     methods: {
         // FUNZIONI
         callAlbum(){
+            this.test = "call"
             axios.get(this.albumArray).then((res)=>{
-                this.album = res.album
+                
+                this.album = res.data;
             })
         }
     },
 
     mounted(){
-        this.callAlbum()
+        this.callAlbum();
     },
 }).mount('#app')
