@@ -20,9 +20,9 @@
         </div>
         <div id="body">
             
-            <div class="container d-flex text-center">
-                <div class="row">
-                    <div class="card m-3 col-4" v-for="(elem, index) in album" :key="index">
+            <div class="container d-flex">
+                <div class="row text-center justify-content-center">
+                    <div class="card m-3" v-for="(elem, index) in album" :key="index">
                         <img :src="elem.poster" class="card-img-top" :alt="elem.title">
                         <div class="card-body">
                             <h4 class="card-title">{{elem.title}}</h4>
