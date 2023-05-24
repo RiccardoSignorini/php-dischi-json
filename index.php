@@ -22,12 +22,31 @@
             
             <div class="container d-flex">
                 <div class="row text-center justify-content-center">
-                    <div class="card m-3" v-for="(elem, index) in album" :key="index">
+                    <div class="card m-3 text-light" v-for="(elem, index) in album" :key="index">
                         <img :src="elem.poster" class="card-img-top" :alt="elem.title">
                         <div class="card-body">
-                            <h4 class="card-title">{{elem.title}}</h4>
-                            <p class="card-text">{{elem.author}}</p>
-                            <h5 class="card-text">{{elem.year}}</h5>
+                            <a href="" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><h4 class="card-title my-4">{{elem.title}}</h4></a>
+                            <!-- <p class="card-text">{{elem.author}}</p>
+                            <h5 class="card-text">{{elem.year}}</h5> -->
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <img :src="elem.poster" class="card-img-top" :alt="elem.title">
+                                            <div>
+                                                <h4 class="card-title">{{elem.title}}</h4>
+                                                <p class="card-text">{{elem.author}}</p>
+                                                <h5 class="card-text">{{elem.year}}</h5>
+                                                <p class="card-text">{{elem.genre}}</p>
+                                            </div>
+                                            <button type="button" class="btn-close my-4" data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>    
                 </div>

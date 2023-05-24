@@ -13,4 +13,14 @@
 
 .card{
     max-width: 300px;
+    background-color: #10212f;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.modal{
+    color: black;
 }
