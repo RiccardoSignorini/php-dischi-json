@@ -8,10 +8,6 @@ createApp({
             albumArray: 'script.php',
             album: '',
         }
-    },
-
-    created(){
-        this.callAlbum()
     },	
 
     methods: {
@@ -21,5 +17,9 @@ createApp({
                 this.album = res.album
             })
         }
-    }
+    },
+
+    mounted(){
+        this.callAlbum()
+    },
 }).mount('#app')

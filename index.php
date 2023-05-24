@@ -11,8 +11,11 @@
 <body>
     <!-- DIV VUE -->
     <div id="app">
-        <div class="container text-center">
+        <div class="container">
             <h1>spotify</h1>
+            <ul>
+                <li v-for="(elem, index) in album" :key="index">{{elem.title}}</li>
+            </ul>
         </div>
     </div>
 
@@ -21,7 +24,7 @@
     <!-- BOOTSTRAP JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- LINK VUE -->
-    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- LINK JS -->
     <script src="main.js"></script>
 </body>
