@@ -7,15 +7,32 @@
     <title>Dischi</title>
     <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
     <!-- DIV VUE -->
     <div id="app">
-        <div class="container">
-            <h1>Spotify</h1>
-            <ul>
-                <li v-for="(elem, index) in album" :key="index">{{elem.title}}</li>
-            </ul>
+        <div id="header" class="d-flex align-items-center">
+            <div class="container">
+                <h1 class="text-light">Spotify</h1>
+            </div>
+        </div>
+        <div id="body">
+            
+            <div class="container d-flex text-center">
+                <div class="row">
+                    <div class="card m-3 col-4" v-for="(elem, index) in album" :key="index">
+                        <img :src="elem.poster" class="card-img-top" :alt="elem.title">
+                        <div class="card-body">
+                            <h4 class="card-title">{{elem.title}}</h4>
+                            <p class="card-text">{{elem.author}}</p>
+                            <h5 class="card-text">{{elem.year}}</h5>
+                        </div>
+                    </div>    
+                </div>
+                
+            </div>
             
         </div>
     </div>
@@ -27,6 +44,6 @@
     <!-- LINK VUE -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- LINK JS -->
-    <script src="main.js"></script>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>

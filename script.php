@@ -1,5 +1,5 @@
 <?php
-$albumList = file_get_contents('album.json');
+$albumList = file_get_contents('./assets/json/album.json');
 
 $album = json_decode($albumList, true);
 

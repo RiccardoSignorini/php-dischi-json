@@ -1,0 +1,16 @@
+/* HEADER */
+#header{
+    height: 10vh;
+    background-color: #10212f;
+}
+
+/* BODY */
+#body{
+    height: 90vh;
+    background-color: #1c2e3b;
+    overflow: scroll;
+}
+
+.card{
+    max-width: 300px;
+}
